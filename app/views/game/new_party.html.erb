@@ -1,0 +1,9 @@
+<h1>New game</h1>
+
+<%= @party.ten_letters_list %>
+
+<%= form_for @party, method: :post, url: game_solution_path do |f| %>
+  <%= f.label :word %>
+  <%= f.text_field :word %>
+  <%= f.submit %>
+<% end %>
